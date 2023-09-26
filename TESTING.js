@@ -1,5 +1,23 @@
 // import happy from './components/assets/happy.png'; // with import
 
+//------------>MUESTRA PARTE DE LA INTERFAZ DE LA PAGINA INCICIAL<---------------------------------//
+//
+/*function MainPage(){
+  return   <>
+  <Header />
+  <BlackContainer>
+    <Searcher/>
+  </BlackContainer>
+  <SelectedMoodContainer color='#E1E1E1' />
+  <div className='ContentContainer'>
+    <MoodContainer color='#F9DB41' />
+    <MoodContainer color='#B5C8FC' />
+    <MoodContainer color='#737B88' />
+  </div>
+
+</>
+}*/
+
 
 /*
 async function GetMovies() {

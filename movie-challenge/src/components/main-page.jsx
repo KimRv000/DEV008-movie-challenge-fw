@@ -43,13 +43,25 @@ export function SelectedMoodContainer(props) {
 }
 
 export function MoodContainer(props) {
+    console.log(props)
     return<div style={{
         backgroundColor: props.color,
         borderRadius: '50%',
         height: '300px',
         width: '300px'
-    }}>
+    }} onClick={props.onClick}>
 
     </div>
 }
 
+// export function ContentContainer(props) {
+//     return <div style={{
+//         backgroundColor: props.color,
+//         height: '100vh',
+//         width: '100%',
+//         display: "flex",
+//         justifyContent: "center"
+//     }}>
+
+//     </div>
+// }
