@@ -1,20 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import './index.css';
+import './index.css';
 //import App from './App';
-//import reportWebVitals from './reportWebVitals';
+import { Header, BlackContainer, SelectedMoodContainer, MoodContainer } from './components/main-page'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-function Greetings() {
-  return <h1> Hello World </h1>
-};
+root.render(
+  <>
+    <Header />
+    <BlackContainer />
+    <SelectedMoodContainer color='#E1E1E1' />
+    <div className='ContentContainer'>
+      <MoodContainer color='#F9DB41' />
+      <MoodContainer color='#B5C8FC' />
+      <MoodContainer color='#737B88' />
+    </div>
 
-root.render(<>
-<Greetings/>
-</>);
+  </>
+);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();
