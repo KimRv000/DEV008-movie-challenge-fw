@@ -1,21 +1,26 @@
-import './App.css';
-import { Header, BlackContainer, SelectedMoodContainer, MoodContainer } from './components/main-page'
-
+import './App.css'
+import Header from './components/header/header'
+import BlackContainer from './components/black-container/blackContainer'
+import ColorContainer from './components/color-container/colorContainer'
+import MyMood from './components/myMood'
+import {MoodContainerHappy,MoodContainerSad,MoodContainerRandom} from './components/mood-container/moodContainer'
 
 function App() {
+
   return (
-    <div>
-  <Header />
-  <BlackContainer>
-  </BlackContainer>
-  <SelectedMoodContainer color='#E1E1E1' />
-  <div className='ContentContainer' >
-    <MoodContainer color='#F9DB41' onClick={(e)=> console.log(e.target)} />
-    <MoodContainer color='#B5C8FC' />
-    <MoodContainer color='#737B88' />
-  </div>
-    </div>
-  );
+    <>
+      <Header />
+      <BlackContainer>
+        <MyMood />
+      </BlackContainer>
+      <ColorContainer />
+      <div className='content-container'>
+        <MoodContainerHappy />
+        <MoodContainerSad />
+        <MoodContainerRandom />
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App

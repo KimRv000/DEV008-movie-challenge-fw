@@ -1,0 +1,30 @@
+
+.moodContainerHappy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #F9DB41;
+}
+
+.moodContainerSad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #B5C8FC;
+}
+
+.moodContainerRandom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #737B88;
+}
