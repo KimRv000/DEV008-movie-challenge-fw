@@ -4,8 +4,8 @@ import happy from '/src/assets/happy.png'
 import sad from '/src/assets/sad.png'
 import random from '/src/assets/random.png'
 
-export  function MoodContainerHappy() {
-    return <div className='moodContainerHappy' >
+export  function MoodContainerHappy(props) {
+    return <div className='moodContainerHappy' onClick={props.onClick} >
         <img
             src={happy}
             alt='happy'
@@ -13,8 +13,8 @@ export  function MoodContainerHappy() {
     </div>
 }
 
-export  function MoodContainerSad() {
-    return <div className='moodContainerSad' >
+export  function MoodContainerSad(props) {
+    return <div className='moodContainerSad' onClick={props.onClick} >
         <img
             src={sad}
             alt='sad'
@@ -22,8 +22,8 @@ export  function MoodContainerSad() {
     </div>
 }
 
-export  function MoodContainerRandom() {
-    return <div className='moodContainerRandom' >
+export  function MoodContainerRandom(props) {
+    return <div className='moodContainerRandom' onClick={props.onClick} >
         <img
             src={random}
             alt='random'

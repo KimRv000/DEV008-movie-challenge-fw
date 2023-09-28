@@ -3,28 +3,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     background-color: #F9DB41;
+    cursor: pointer;
 }
 
 .moodContainerSad{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     background-color: #B5C8FC;
+    cursor: pointer;
 }
 
 .moodContainerRandom{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     background-color: #737B88;
+    cursor: pointer;
 }
