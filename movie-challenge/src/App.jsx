@@ -15,9 +15,9 @@ function App() {
       </BlackContainer>
       <ColorContainer />
       <div className='content-container'>
-        <MoodContainerHappy />
-        <MoodContainerSad />
-        <MoodContainerRandom />
+        <MoodContainerHappy onClick={()=> console.log('happy')}/>
+        <MoodContainerSad onClick={()=> console.log('sad')}/>
+        <MoodContainerRandom onClick={()=> console.log('random')}/>
       </div>
     </>
   )
