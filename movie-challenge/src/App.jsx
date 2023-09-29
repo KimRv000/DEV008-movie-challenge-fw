@@ -9,12 +9,11 @@ import ContentConatainer from './components/content-container/contentContainer'
 
 
 function App() {
-  const [ mostrarMoodContainer, setMostrarMoodContainer ] = useState(true);
+  const [ showMoodContainer, setShowMoodContainer ] = useState(true);
   const [ disabledX, setDisabledX ] = useState(true);
 
-  const ocultarContainer = () => {
-    // document.getElementById('contentContainer').innerHTML = '';
-    setMostrarMoodContainer(false);
+  const HideContent = () => {
+    setShowMoodContainer(false);
     setDisabledX(false)
   };
 
@@ -30,9 +29,9 @@ function App() {
       </BlackContainer>
       <ColorContainer />
       <ContentConatainer>
-        { mostrarMoodContainer && <MoodContainerHappy onClick={ocultarContainer} /> }
-        {mostrarMoodContainer && <MoodContainerSad onClick={ocultarContainer} />}
-        {mostrarMoodContainer &&<MoodContainerRandom onClick={ocultarContainer} />}
+        { showMoodContainer && <MoodContainerHappy onClick={HideContent} /> }
+        {showMoodContainer && <MoodContainerSad onClick={HideContent} />}
+        {showMoodContainer &&<MoodContainerRandom onClick={HideContent} />}
       </ContentConatainer>
     </>
   )
