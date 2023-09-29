@@ -3,17 +3,3 @@ body {
     border: 0;
     padding: 0;
 }
-
-.mood-text {
-    font-family: 'Bahnschrift';
-    font-size: 40px;
-    color: white;
-}
-
-.content-container {
-    background-color: #E1E1E1;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}

@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.moodContainerHappy:hover {
+    transform: scale(1.1);
+  }
+
 .moodContainerSad{
     display: flex;
     justify-content: center;
@@ -20,6 +24,9 @@
     background-color: #B5C8FC;
     cursor: pointer;
 }
+.moodContainerSad:hover {
+    transform: scale(1.1);
+  }
 
 .moodContainerRandom{
     display: flex;
@@ -31,3 +38,6 @@
     background-color: #737B88;
     cursor: pointer;
 }
+.moodContainerRandom:hover {
+    transform: scale(1.1);
+  }
