@@ -6,32 +6,47 @@ import ColorContainer from './components/color-container/colorContainer'
 import MyMood from './components/myMood'
 import { MoodContainerHappy, MoodContainerSad, MoodContainerRandom } from './components/mood-container/moodContainer'
 import ContentConatainer from './components/content-container/contentContainer'
+import Searcher from './components/searcher/searcher'
+//import { MiniMoodHappy, MiniMoodRandom, MiniMoodSad } from './components/mini-moods/mini-moods'
 
 
 function App() {
-  const [ showMoodContainer, setShowMoodContainer ] = useState(true);
-  const [ disabledX, setDisabledX ] = useState(true);
+  const [showMoodContainer, setShowMoodContainer] = useState(true);
+  const [disabledMymoodText, setdisabledMymoodText] = useState(true);
+  const [disabledSearcher, setdisabledSearcher] = useState(false);
 
   const HideContent = () => {
     setShowMoodContainer(false);
-    setDisabledX(false)
+    setdisabledMymoodText(false);
+    setdisabledSearcher(true);
   };
 
   const PageRefresh = () => {
     window.location.reload()
   }
-
+  /*
+    const GetData = () =>{
+      fetch("http://www.omdbapi.com/?i=tt3896198&apikey=42f62605")
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+    }
+    GetData();
+  */
   return (
     <>
-      <Header onClick={PageRefresh}  />
+      <Header onClick={PageRefresh} />
       <BlackContainer>
-        {disabledX && <MyMood />}
+        {disabledMymoodText && <MyMood />}
+        {disabledSearcher && <Searcher />}
       </BlackContainer>
-      <ColorContainer />
+      <ColorContainer>
+      
+      </ColorContainer>
       <ContentConatainer>
-        { showMoodContainer && <MoodContainerHappy onClick={HideContent} /> }
+        {showMoodContainer && <MoodContainerHappy onClick={HideContent} />}
         {showMoodContainer && <MoodContainerSad onClick={HideContent} />}
-        {showMoodContainer &&<MoodContainerRandom onClick={HideContent} />}
+        {showMoodContainer && <MoodContainerRandom onClick={HideContent} />}
       </ContentConatainer>
     </>
   )
