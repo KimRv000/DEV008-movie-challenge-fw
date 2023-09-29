@@ -13,4 +13,5 @@
     font-family: 'Bauhaus 93';
     font-size: 100px;
     text-shadow:  -10px -10px 1px black;
+    cursor:pointer;
 }
