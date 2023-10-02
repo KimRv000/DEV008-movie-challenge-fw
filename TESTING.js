@@ -92,3 +92,42 @@ function App() {
 
 export default App
 */
+
+//--------------------->CARD<------------------
+import './card.css'
+import data from '../../../../movies/ghibli'
+
+export default function Card() {
+    const dataFilms = data.films
+    console.log(dataFilms)
+    const moviesTitle = dataFilms.map(movie=> movie.title)
+    return moviesTitle
+
+}
+
+
+//----------------------------------------------------------------//
+import './card.css'
+//import data from '../../../../movies/ghibli'
+//import { useState } from 'react';
+
+export default function Card() {
+    //const [dataFilms, setDataFilms] = useState([]);
+    //let data = []
+
+    const dataAPI = () => {
+        const dataFilms = fetch("http://www.omdbapi.com/?i=tt3896198&apikey=42f62605")//--------Hacer promesa-----------//
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+            console.log(dataFilms)
+            console.log(dataFilms.Title)  //-----------Undefined-------------//
+    }
+    dataAPI()
+
+
+    //setDataFilms(dataAPI)
+    //console.log(dataFilms)
+
+
+}
