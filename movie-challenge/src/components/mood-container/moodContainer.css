@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 350px;
-    width: 350px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     background-color: #F9DB41;
     cursor: pointer;
@@ -18,8 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 350px;
-    width: 350px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     background-color: #B5C8FC;
     cursor: pointer;
@@ -32,12 +32,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 350px;
-    width: 350px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     background-color: #737B88;
     cursor: pointer;
 }
 .moodContainerRandom:hover {
     transform: scale(1.1);
+  }
+  .imgMood{
+    height: 60px;
+    width: 60px;
   }

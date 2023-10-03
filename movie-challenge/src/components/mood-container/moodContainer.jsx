@@ -6,7 +6,7 @@ import random from '/src/assets/random.png'
 
 export  function MoodContainerHappy(props) {
     return <div className='moodContainerHappy' onClick={props.onClick} >
-        <img
+        <img className='imgMood'
             src={happy}
             alt='happy'
         />
@@ -15,7 +15,7 @@ export  function MoodContainerHappy(props) {
 
 export  function MoodContainerSad(props) {
     return <div className='moodContainerSad' onClick={props.onClick} >
-        <img
+        <img className='imgMood'
             src={sad}
             alt='sad'
         />
@@ -24,7 +24,7 @@ export  function MoodContainerSad(props) {
 
 export  function MoodContainerRandom(props) {
     return <div className='moodContainerRandom' onClick={props.onClick} >
-        <img
+        <img className='imgMood'
             src={random}
             alt='random'
         />

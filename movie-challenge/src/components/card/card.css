@@ -1,0 +1,25 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 300px;
+    padding: 10px;
+    margin: 15px;
+    box-shadow: 8px 3px 10px rgb(86, 86, 86);
+    font-family: 'Bahnschrift';
+    font-size: smaller;
+    border-radius: 10px;
+}
+.cardContainer:hover{
+    transform: scale(1.05);
+}
+.img{
+    width: 180px;
+    height: 260px;
+    border-radius: 5px;
+}
+.cardContainer h2 {
+    margin: 0;
+}
