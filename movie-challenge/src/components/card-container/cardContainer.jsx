@@ -11,13 +11,12 @@ export default function CardContainer() {
     console.log(dataFilms)
     return(
         <div>
-           <h1>Movies</h1>
            <div>
-            <ul>
+            <div className='cards'>
                 {dataFilms?.results.map((movie) => (
                <Card movie={movie} key={movie.id}></Card>
                 ))};
-            </ul>
+            </div>
            </div>
         </div>
     );

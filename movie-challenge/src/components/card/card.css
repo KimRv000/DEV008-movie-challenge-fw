@@ -11,7 +11,9 @@
     font-family: 'Bahnschrift';
     font-size: smaller;
     border-radius: 10px;
-    
+}
+.cardContainer:hover{
+    transform: scale(1.05);
 }
 .img{
     width: 180px;

@@ -1,40 +1,49 @@
 import './App.css'
-//import { useState } from 'react'
-// import Header from './components/header/header'
-// import BlackContainer from './components/black-container/blackContainer'
-// import ColorContainer from './components/color-container/colorContainer'
-// import MyMood from './components/myMood'
-// import { MoodContainerHappy, MoodContainerSad, MoodContainerRandom } from './components/mood-container/moodContainer'
- import ContentConatainer from './components/content-container/contentContainer'
-// import Searcher from './components/searcher/searcher'
+import { useState } from 'react'
+import Header from './components/header/header'
+import BlackContainer from './components/black-container/blackContainer'
+import ColorContainer from './components/color-container/colorContainer'
+import ContentConatainer from './components/content-container/contentContainer'
 import CardContainer from './components/card-container/cardContainer'
+import MyMood from './components/myMood'
+import { MoodContainerHappy, MoodContainerSad, MoodContainerRandom } from './components/mood-container/moodContainer'
+
+
 
 
 function App() {
-  // const [showMoodContainer, setShowMoodContainer] = useState(true);
-  // const [disabledMymoodText, setdisabledMymoodText] = useState(true);
-  // const [disabledSearcher, setdisabledSearcher] = useState(false);
 
-  // const HideContent = () => {
-  //   setShowMoodContainer(false);
-  //   setdisabledMymoodText(false);
-  //   setdisabledSearcher(true);
-  // };
-
-  // const PageRefresh = () => {
-  //   window.location.reload()
-  // }
-
-  /*const GetData = () => {
-    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=42f62605")
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error));
+  const PageRefresh = () => {
+    window.location.reload()
   }
-  GetData();*/
+
+  const [showMoodContainerHappy, setShowMoodContainerHappy] = useState(true);
+  const [showMoodContainerSad, setShowMoodContainerSad] = useState(true);
+  const [showMoodContainerRandom, setShowMoodContainerRandom] = useState(true);
+
+  const ClickHappy = () => {
+    setShowMoodContainerSad(false);
+    setShowMoodContainerRandom(false);
+  };
+  const ClickSad = () => {
+    setShowMoodContainerHappy(false);
+    setShowMoodContainerRandom(false);
+  };
+  const ClickRandom = () => {
+    setShowMoodContainerSad(false);
+    setShowMoodContainerHappy(false);
+  };
 
   return (
     <>
+      <Header onClick={PageRefresh} />
+      <BlackContainer>
+        <MyMood />
+        {showMoodContainerHappy && <MoodContainerHappy onClick={ClickHappy}  />}
+        {showMoodContainerSad && <MoodContainerSad onClick={ClickSad}  />}
+        {showMoodContainerRandom && <MoodContainerRandom onClick={ClickRandom}  />}
+      </BlackContainer>
+      <ColorContainer />
       <ContentConatainer>
         <CardContainer />
       </ContentConatainer>
