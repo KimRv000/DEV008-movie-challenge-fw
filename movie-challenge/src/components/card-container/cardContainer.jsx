@@ -1,23 +1,36 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import './cardContainer.css'
-import FetchApi from '../fetch-API';
 import Card from '../card/card';
+import { useState, useEffect } from 'react';
+
+export default function CardContainer(props) {
 
 
-export default function CardContainer() {
+    const FetchApi = (url) => {
 
 
-    const dataFilms = FetchApi('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=542b7d3d4f70aaf332ed83531b764b10')
+        const [data, setData] = useState(null);
+
+        useEffect(() => {
+            fetch(url, { method: "GET" })
+                .then(response => response.json())
+                .then(data => setData(data));
+        }, []);
+
+        return data
+    }
+
+    const dataFilms = FetchApi(props.url)
     console.log(dataFilms)
-    return(
+    return (
         <div>
-           <div>
-            <div className='cards'>
-                {dataFilms?.results.map((movie) => (
-               <Card movie={movie} key={movie.id}></Card>
-                ))};
+            <div>
+                <div className='cards'>
+                    {dataFilms?.results.map((movie) => (
+                        <Card movie={movie} key={movie.id}></Card>
+                    ))};
+                </div>
             </div>
-           </div>
         </div>
     );
 
