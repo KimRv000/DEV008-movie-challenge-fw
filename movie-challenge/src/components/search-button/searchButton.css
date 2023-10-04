@@ -1,0 +1,10 @@
+.button{
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Bahnschrift';
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #56617F;
+    margin: 5px;
+}

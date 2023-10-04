@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import './colorContainer.css'
-import Searcher from '../searcher/searcher'
 
-export default function ColorContainer() {
+export default function ColorContainer({ children }) {
     return <div className="color-container">
-        <Searcher/>
+        { children }
     </div>
 }
